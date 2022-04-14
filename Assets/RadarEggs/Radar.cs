@@ -17,13 +17,13 @@ public class Radar : MonoBehaviour
 
     public static List<RadarObject> radObjects = new List<RadarObject>();
 
-    public static void RegisterRadarObject(GameObject o, Image i)
+    private static void RegisterRadarObject(GameObject o, Image i)
     {
         Image image = Instantiate(i);
         radObjects.Add(new RadarObject() { owner = o, icon = image });
     }
 
-    public static void RemoveRadarObject(GameObject o)
+    private static void RemoveRadarObject(GameObject o)
     {
         List<RadarObject> newList = new List<RadarObject>();
         for (int i = 0; i < radObjects.Count; i++)
@@ -64,4 +64,14 @@ public class Radar : MonoBehaviour
         DrawRadarDots();
     }
 
+    public void ItemDropped(GameObject go)
+    {
+        Debug.Log("Item Dropped");
+        RegisterRadarObject(go, go.GetComponent<Item>().icon);
+    }
+
+    public void ItemPickedUp(GameObject go)
+    {
+        RemoveRadarObject(go);
+    }
 }

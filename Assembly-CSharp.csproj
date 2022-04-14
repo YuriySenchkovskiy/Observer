@@ -60,6 +60,11 @@
      <Compile Include="Assets\Scripts\SetPlantInfo.cs" />
      <Compile Include="Assets\Scripts\Plant.cs" />
      <Compile Include="Assets\3D Game Kit - Environment Pack\Models\AIControl.cs" />
+     <Compile Include="Assets\RadarEggs\Spawner.cs" />
+     <Compile Include="Assets\RadarEggs\Event.cs" />
+     <Compile Include="Assets\RadarEggs\EventListener.cs" />
+     <Compile Include="Assets\RadarEggs\Item.cs" />
+     <Compile Include="Assets\RadarEggs\MessageController.cs" />
      <None Include="Assets\3D Game Kit - Environment Pack\Shaders\Vegetation.shader" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
